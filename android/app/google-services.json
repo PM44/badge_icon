@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "883868931697",
+    "firebase_url": "https://badge-icon-default-rtdb.firebaseio.com",
+    "project_id": "badge-icon",
+    "storage_bucket": "badge-icon.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:883868931697:android:a888897ad0a437889dedd0",
+        "android_client_info": {
+          "package_name": "com.example.badge_icon"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBWClATzTpdXt1wiKQ_PqOoPOsIb2hhe3k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
