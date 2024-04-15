@@ -15,6 +15,7 @@ class PushNotificationService {
     _fcm.setAutoInitEnabled(true);
     FirebaseMessaging.onMessage.listen((RemoteMessage message) {});
     FirebaseMessaging.onMessageOpenedApp.listen((RemoteMessage message) {
+      i=0;
       FlutterAppBadger.removeBadge();
     });
 
