@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:badge_icon/firebase_options.dart';
 import 'package:badge_icon/push_notification_service.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -8,7 +10,15 @@ Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
-  FirebaseMessaging.instance.requestPermission(alert: true, badge: true);
+  FirebaseMessaging.instance.requestPermission(
+    alert: true,
+    badge: true,
+  );
+  if (Platform.isIOS) {
+    FirebaseMessaging.instance.getAPNSToken().then((value) {
+      FirebaseMessaging.instance.getToken().then((value) {});
+    });
+  }
   runApp(MyApp());
 }
 

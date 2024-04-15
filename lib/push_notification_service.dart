@@ -7,6 +7,12 @@ class PushNotificationService {
 
   Future initialize() async {
     _fcm.subscribeToTopic('badge_testing');
+    _fcm.setForegroundNotificationPresentationOptions(
+      alert: true,
+      badge: true,
+      sound: true,
+    );
+    _fcm.setAutoInitEnabled(true);
     FirebaseMessaging.onMessage.listen((RemoteMessage message) {});
     FirebaseMessaging.onMessageOpenedApp.listen((RemoteMessage message) {
       FlutterAppBadger.removeBadge();
